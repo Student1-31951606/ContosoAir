@@ -29,7 +29,7 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Azure Connection'
+    azureResourceManagerConnection: 'MIPDG--lod48078806(250f1aab-ce07-4bed-aba0-8b717dfb7719)'
     subscriptionId: '250f1aab-ce07-4bed-aba0-8b717dfb7719'
     action: 'Create Or Update Resource Group'
     resourceGroupName: '$(resourcegroup)'
@@ -39,7 +39,6 @@ steps:
     csmParametersFile: '$(Pipeline.Workspace)/drop/Templates/azuredeploy.parameters.json'
     overrideParameters: '-p_environment $(web_environment) -p_site_prefix $(web_prefix) -p_site_web_name $(web_site)'
     deploymentMode: 'Incremental'
-
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
