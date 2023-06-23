@@ -44,7 +44,7 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'MIPDG--lod48078806(1)(250f1aab-ce07-4bed-aba0-8b717dfb7719)'
     appType: 'webApp'
-    WebAppName: '(web_prefix)-$(web_site)-$(web_environment)'
+    WebAppName: '$(web_prefix)-$(web_site)-$(web_environment)'
     packageForLinux: '$(Pipeline.Workspace)/**/*.zip'
 
      
